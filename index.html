@@ -1,58 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="./styles.css">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Page</title>
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    /* Add inline styles for position control (for noButton) */
+    #noButton {
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <h1 class="header_text">--------<br>/<br>--------</h1>
+      <h1 class="header_text">
+        Hey Shrayesha, you have become the artist that puts color in my life. 
+        Can't have good graphics without you. I hope this is my last creation 
+        with poor graphics. Tespachi ta sadai timi hunchau help garnu.
+      </h1>
+    </div>
+
+    <div class="gif_container">
+      <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXR1ZG41YXdtMWNkemRldGdmbjdqbmthd2FnanFwbGxmZDZreTF5YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jwzNDFOjiUBPEUJC6G/giphy.gif" alt="Cute animated illustration">
+    </div>
+
+    <div class="buttons">
+      <form action="https://formsubmit.co/69terobau@gmail.com" method="POST">
         
-    </head> 
-    <body>
-        <div class="container">
-            <div >
-              
-                <h1 class = "header_text">
-			
-			--------
-			<p>/<p>
-			--------
-			</h1>
-  <h1 class = "header_text">
-			
-			Hey Shrayesha, you have become the artist that puts color in my life. Cant have good graphics without you. I hope this is my last creation with poor graphics. Tespachi ta sadai timi hunchau help garnu.			
-			</h1>
-            </div>
-            <div class="gif_container">
-                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXR1ZG41YXdtMWNkemRldGdmbjdqbmthd2FnanFwbGxmZDZreTF5YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jwzNDFOjiUBPEUJC6G/giphy.gif" alt="Cute animated illustration">
-            </div>
-			<
-            <div class = "buttons">
-			<form action="https://formsubmit.co/69terobau@gmail.com" method="POST">
-			<h1 class = "bottom_text"> So mero girlfriend hune hoina ta? </h1>
-			 <input type="hidden" name="_next" value="RamDevgit99/Ramdev/edit/main/next.html">
-                  <button class="btn" id = "yesButton" onclick="nextPage()type="submit"">Yes</button>
-		
-		 <label for="message">Your Message:
-	
-   <textarea id="message" name="message" placeholder="Write down 8 reasons before clicking yes"></textarea>
-  </label>
-     <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>           
-</form>
+        <!-- REDIRECT: Make sure this URL is a full GitHub Pages link -->
+        <input type="hidden" name="_next" value="https://ramdevgit99.github.io/Ramdev/yes.html">
+        <input type="hidden" name="_captcha" value="false">
 
-<p id="status-message"></p>
+        <h1 class="bottom_text">So mero girlfriend hune hoina ta?</h1>
 
+        <label for="message">Your Message:</label><br>
+        <textarea id="message" name="message" placeholder="Write down 8 reasons before clicking yes" required></textarea>
 
-                <script>
-                    function nextPage() {
-                        window.location.href = "yes.html";
-                    }
-                    
-                    function moveButton() {
-                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
-                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
-                        document.getElementById('noButton').style.left = `${x}px`;
-                        document.getElementById('noButton').style.top = `${y}px`;
-                    }
-                </script> 
-            </div>
-        </div>
-       
-    </body> 
+        <br><br>
+
+        <!-- YES button submits the form -->
+        <button class="btn" id="yesButton" type="submit">Yes</button>
+
+        <!-- NO button runs JS to move away -->
+        <button type="button" class="btn" id="noButton" onmouseover="moveButton()">No</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function moveButton() {
+      const button = document.getElementById('noButton');
+      const x = Math.random() * (window.innerWidth - button.offsetWidth - 50);
+      const y = Math.random() * (window.innerHeight - button.offsetHeight - 50);
+      button.style.left = `${x}px`;
+      button.style.top = `${y}px`;
+    }
+  </script>
+</body>
 </html>
