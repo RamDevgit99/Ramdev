@@ -2,115 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Proposal Page</title>
-    <link rel="stylesheet" href="./styles.css">
-
-    <style>
-        /* Needed for moving button */
-        #noButton {
-            position: absolute;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Shrayesha 💜</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
 <div class="container">
 
-    <div>
+    <h1 class="glow">Hey Shrayesha 💜</h1>
 
-        <h1 class="header_text">
-            --------<br>
-            /<br>
-            --------
-        </h1>
+    <div class="card">
 
-        <h1 class="header_text">
-            Hey Shrayesha, you have become the artist that puts color in my life.
-            Cant have good graphics without you.
-            I hope this is my last creation with poor graphics.
-            Tespachi ta sadai timi hunchau help garnu.
-        </h1>
-
-    </div>
-
-    <div class="gif_container">
-        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXR1ZG41YXdtMWNkemRldGdmbjdqbmthd2FnanFwbGxmZDZreTF5YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jwzNDFOjiUBPEUJC6G/giphy.gif"
-             alt="Cute animated illustration">
-    </div>
+<img src="pic.jpeg" class="kuromi" alt="Rembrandt Cat">
 
 
-    <div class="buttons">
 
-        <form action="https://formsubmit.co/69terobau@gmail.com" method="POST">
 
-            <h1 class="bottom_text">So mero girlfriend hune hoina ta?</h1>
+        <p class="message">
+            In this digital universe,<br>
+            you are my favorite glitch ✨<br><br>
 
-            <!-- Hidden redirect -->
-            <input type="hidden" name="_next" value="https://ramdevgit99.github.io/Ramdev/yes.html">
+            Like spider lilies in bloom,<br>
+            you color my world 🌸<br><br>
 
-            <label for="message">
-                Your Message:
-            </label><br>
+            So…
+        </p>
 
-            <textarea
-                id="message"
-                name="message"
-                placeholder="Write down 8 reasons before clicking yes"
-                rows="4"
-                cols="40">
-            </textarea>
+        <h2 class="question">
+            Will you be my Valentine? 💖
+        </h2>
 
-            <br><br>
+        <div class="buttons">
+            <button onclick="yesClicked()">YES 💕</button>
+            <button onclick="noClicked()">No 🙈</button>
+        </div>
 
-            <!-- YES Button -->
-            <button
-                class="btn"
-                id="yesButton"
-                type="submit"
-                onclick="nextPage()">
-                Yes
-            </button>
-
-            <!-- NO Button -->
-            <button
-                type="button"
-                class="btn"
-                id="noButton"
-                onmouseover="moveButton()"
-                onclick="moveButton()">
-                No
-            </button>
-
-        </form>
-
-        <p id="status-message"></p>
+        <p id="response"></p>
 
     </div>
 
 </div>
 
-
-<script>
-
-    function nextPage() {
-        window.location.href = "yes.html";
-    }
-
-
-    function moveButton() {
-
-        var button = document.getElementById('noButton');
-
-        var x = Math.random() * (window.innerWidth - button.offsetWidth);
-        var y = Math.random() * (window.innerHeight - button.offsetHeight);
-
-        button.style.left = x + "px";
-        button.style.top = y + "px";
-    }
-
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
-
